@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9bKVHKZTBVE=",
+  "dgSpecHash": "OhDlYZ6C88M=",
   "success": true,
-  "projectFilePath": "C:\\Projects\\EsportPortalAPI\\EsportPortalAPI\\EsportPortalAPI.csproj",
+  "projectFilePath": "C:\\Projects\\EsportPortalAPI\\EsportPortalAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wloda\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.7\\microsoft.entityframeworkcore.8.0.7.nupkg.sha512",
     "C:\\Users\\wloda\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.7\\microsoft.entityframeworkcore.abstractions.8.0.7.nupkg.sha512",

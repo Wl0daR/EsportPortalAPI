@@ -1142,11 +1142,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\EsportPortalAPI\\EsportPortalAPI\\EsportPortalAPI.csproj",
+      "projectUniqueName": "C:\\Projects\\EsportPortalAPI\\EsportPortalAPI.csproj",
       "projectName": "EsportPortalAPI",
-      "projectPath": "C:\\Projects\\EsportPortalAPI\\EsportPortalAPI\\EsportPortalAPI.csproj",
+      "projectPath": "C:\\Projects\\EsportPortalAPI\\EsportPortalAPI.csproj",
       "packagesPath": "C:\\Users\\wloda\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\EsportPortalAPI\\EsportPortalAPI\\obj\\",
+      "outputPath": "C:\\Projects\\EsportPortalAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
