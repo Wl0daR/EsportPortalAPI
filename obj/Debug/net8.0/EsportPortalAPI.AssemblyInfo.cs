@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EsportPortalAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45e4568fb35f388dd1531fa69ff17737803c6c59")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a76264ce90ec9379ff9c663b19f33c92f98d64f")]
 [assembly: System.Reflection.AssemblyProductAttribute("EsportPortalAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EsportPortalAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

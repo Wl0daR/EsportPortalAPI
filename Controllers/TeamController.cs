@@ -1,94 +1,54 @@
-﻿// Controllers/TeamsController.cs
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
-[Route("api/[controller]")]
-[ApiController]
-public class TeamsController : ControllerBase
+namespace EsportPortal.Controllers
 {
-    private readonly EsportContext _context;
-
-    public TeamsController(EsportContext context)
+    [Route("api/[controller]")]
+    [ApiController]
+    public class TeamsController : ControllerBase
     {
-        _context = context;
-    }
+        private readonly EsportContext _context;
 
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<Team>>> GetTeams()
-    {
-        return await _context.Teams.ToListAsync();
-    }
-
-    [HttpGet("{id}")]
-    public async Task<ActionResult<Team>> GetTeam(int id)
-    {
-        var team = await _context.Teams.FindAsync(id);
-
-        if (team == null)
+        public TeamsController(EsportContext context)
         {
-            return NotFound();
+            _context = context;
         }
 
-        return team;
-    }
-
-    [HttpPost]
-    public async Task<ActionResult<Team>> PostTeam(Team team)
-    {
-        _context.Teams.Add(team);
-        await _context.SaveChangesAsync();
-
-        return CreatedAtAction("GetTeam", new { id = team.Id }, team);
-    }
-
-    [HttpPut("{id}")]
-    public async Task<IActionResult> PutTeam(int id, Team team)
-    {
-        if (id != team.Id)
+        // GET: api/Teams
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Team>>> GetTeams()
         {
-            return BadRequest();
+            return await _context.Teams.Include(t => t.Players).ToListAsync();
         }
 
-        _context.Entry(team).State = EntityState.Modified;
-        try
+        // GET: api/Teams/1/Players
+        [HttpGet("{id}/Players")]
+        public async Task<ActionResult<IEnumerable<Player>>> GetTeamPlayers(int id)
         {
-            await _context.SaveChangesAsync();
-        }
-        catch (DbUpdateConcurrencyException)
-        {
-            if (!TeamExists(id))
+            var team = await _context.Teams.Include(t => t.Players).FirstOrDefaultAsync(t => t.Id == id);
+
+            if (team == null)
             {
                 return NotFound();
             }
-            else
-            {
-                throw;
-            }
+
+            return team.Players.ToList();
         }
 
-        return NoContent();
-    }
-
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteTeam(int id)
-    {
-        var team = await _context.Teams.FindAsync(id);
-        if (team == null)
+        // GET: api/Teams/1
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Team>> GetTeam(int id)
         {
-            return NotFound();
+            var team = await _context.Teams.Include(t => t.Players).FirstOrDefaultAsync(t => t.Id == id);
+
+            if (team == null)
+            {
+                return NotFound();
+            }
+
+            return team;
         }
-
-        _context.Teams.Remove(team);
-        await _context.SaveChangesAsync();
-
-        return NoContent();
-    }
-
-    private bool TeamExists(int id)
-    {
-        return _context.Teams.Any(e => e.Id == id);
     }
 }
