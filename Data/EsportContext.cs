@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EsportPortal.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 public class EsportContext : DbContext
@@ -32,13 +33,13 @@ public class EsportContext : DbContext
             .HasForeignKey(ph => ph.TeamId);
 
         modelBuilder.Entity<TeamTournamentHistory>()
-            .HasOne(tth => tth.Team)
-            .WithMany(t => t.TeamTournamentHistories)
-            .HasForeignKey(tth => tth.TeamId);
+            .HasOne(tth => tth.Tournament)
+            .WithMany(t => t.TeamTournamentHistories) 
+            .HasForeignKey(tth => tth.TournamentId);
 
         modelBuilder.Entity<TeamTournamentHistory>()
             .HasOne(tth => tth.Tournament)
-            .WithMany(t => t.TeamTournamentHistories)
+            .WithMany(t => t.TeamTournamentHistories) 
             .HasForeignKey(tth => tth.TournamentId);
     }
 }

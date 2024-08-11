@@ -1136,23 +1136,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\WlodaR\\.nuget\\packages\\": {},
-    "E:\\VisualStudioShared\\NuGetPackages": {}
+    "C:\\Users\\wloda\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\projects\\EsportPortalAPI\\EsportPortalAPI.csproj",
+      "projectUniqueName": "C:\\Projects\\EsportPortalAPI\\EsportPortalAPI.csproj",
       "projectName": "EsportPortalAPI",
-      "projectPath": "E:\\projects\\EsportPortalAPI\\EsportPortalAPI.csproj",
-      "packagesPath": "C:\\Users\\WlodaR\\.nuget\\packages\\",
-      "outputPath": "E:\\projects\\EsportPortalAPI\\obj\\",
+      "projectPath": "C:\\Projects\\EsportPortalAPI\\EsportPortalAPI.csproj",
+      "packagesPath": "C:\\Users\\wloda\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\EsportPortalAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "E:\\VisualStudioShared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\WlodaR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\wloda\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

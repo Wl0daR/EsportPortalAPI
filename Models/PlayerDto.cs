@@ -15,7 +15,7 @@ namespace EsportPortalAPI.Models
         public string Nationality { get; set; }
         public DateTime BirthDate { get; set; }
         public string FavouriteMap { get; set; }
-        public string PhotoUrl { get; set; } = "/images/Player/NoAvatar.png";
+        public string PhotoUrl { get; set; }
         public List<PlayerHistoryDto> PlayerHistories { get; set; } 
     }
 }

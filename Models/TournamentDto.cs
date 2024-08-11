@@ -1,11 +1,11 @@
 ﻿namespace EsportPortal.Models
 {
-    public class Team
+    public class TournamentDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public DateTime Date { get; set; }
+        public string Location { get; set; }
         public string LogoUrl { get; set; }
-        public ICollection<Player> Players { get; set; }
-        public ICollection<TeamTournamentHistory> TeamTournamentHistories { get; set; }
     }
 }
